@@ -1,0 +1,50 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card border-0">
+                <div class="card-body">
+                    <table class="table table-strip">
+                        <thead>
+                            <tr>
+                                <th>Nomor Kontak</th>
+                                <th>Unit Kerja</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse($boxs as $box)
+
+                                <tr>
+                                    @if( $box->nomor_kotak == null)
+                                        <td>
+                                            <a href="{{route('kotak-arsip.edit', $box->id)}}" class="btn btn-outline-info btn-sm">Input Nomor Kotak</a>
+                                        </td>
+                                        <td colspan="2">
+                                            {{$box->unit->unit_kerja}}
+                                        </td>
+                                    @else
+                                        <td>{{$box->nomor_kotak}}</td>
+                                        <td>{{$box->unit->unit_kerja}}</td>
+                                        <td>
+                                           <a href="{{route('rekap-arsip.edit', $box->id)}}" class="btn btn-outline-info btn-sm">Input Rekam Arsip</a>
+                                        </td>
+                                    @endif
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="3">Maaf Data belum tersedia</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection
