@@ -31,6 +31,7 @@
                                         <td>{{$box->unit->unit_kerja}}</td>
                                         <td>
                                            <a href="{{route('rekap-arsip.edit', $box->id)}}" class="btn btn-outline-info btn-sm">Input Rekam Arsip</a>
+                                           <a href="{{route('kotak-arsip.show', $box->id)}}" class="btn btn-outline-primary btn-sm">Cetak Data</a>
                                         </td>
                                     @endif
                                 </tr>

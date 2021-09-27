@@ -30,6 +30,7 @@ Route::group(['prefix' => 'kotak-arsip'], function(){
     route::get('/edit/{box}','KotakarsipController@edit')->name('kotak-arsip.edit');
     route::put('/update/{box}','KotakarsipController@update')->name('kotak-arsip.update');
     route::post('/store/{box}','KotakarsipController@store')->name('kotak-arsip.store');
+    route::get('/show/{box}','KotakarsipController@show')->name('kotak-arsip.show');
 });
 
 Route::group(['prefix'  => 'classification'], function(){
@@ -48,5 +49,7 @@ Route::group(['prefix' => 'rekap-arsip'], function(){
     route::post('/store/{box}','RekaparsipController@store')->name('rekap-arsip.store');
     route::get('/show/{box}','RekaparsipController@show')->name('rekap-arsip.show');
 });
+
+route::get('/label-arsip/show{record}','LabelController@show')->name('label-arsip.show');
 
 Route::get('/home', 'HomeController@index')->name('home');

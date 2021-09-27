@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Box;
 use App\Unit;
 use App\Record;
@@ -24,6 +25,15 @@ class KotakarsipController extends Controller
        $boxs = Box::findOrFail($id);
 
        return view('kotakarsip.edit', compact('boxs'));
+    }
+
+    public function show($id)
+    {
+        $box = Box::findOrFail($id);
+
+        $pdf = PDF::loadView('kotakarsip.show', compact('box'))->setPaper('legal','landscape');
+
+       return $pdf->stream('kotak_arsip.pdf');
     }
     public function update(Request $request, $id)
     {

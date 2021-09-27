@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Box;
 use App\Record;
 use App\Classification;
@@ -69,6 +70,8 @@ class RekaparsipController extends Controller
     {
        $record = Record::findOrFail($id);
 
-       return view('rekaparsip.show', compact('record'));
+       $pdf = PDF::loadView('rekaparsip.show', compact('record'));
+
+       return $pdf->stream('rekap_arsip.pdf');
     }
 }

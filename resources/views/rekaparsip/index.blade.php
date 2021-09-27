@@ -28,6 +28,8 @@
                                 <td>{{$record->nomor_portagel}}</td>
                                 <td>
                                     <a href="{{route('rekap-arsip.show', $record->id)}}" class="btn btn-outline-info btn-sm">View Detail Rekap Arsip</a>
+                                    <a href="{{route('label-arsip.show', $record->id)}}" class="btn btn-outline-info btn-sm">Cetak Label Arsip</a>
+                                    <a href="{{route('label-arsip.show', $record->id)}}" class="btn btn-outline-info btn-sm">Daftar Arsip</a>
                                 </td>
                             </tr>
                             @empty
