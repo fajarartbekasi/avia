@@ -50,6 +50,6 @@ Route::group(['prefix' => 'rekap-arsip'], function(){
     route::get('/show/{box}','RekaparsipController@show')->name('rekap-arsip.show');
 });
 
-route::get('/label-arsip/show{record}','LabelController@show')->name('label-arsip.show');
+route::get('/label-arsip/show{record}','LabelController@singleRecord')->name('label-arsip.show');
 
 Route::get('/home', 'HomeController@index')->name('home');
