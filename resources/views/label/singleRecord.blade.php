@@ -16,11 +16,11 @@
                 <tbody>
                     <tr>
                         <td>{{$record->box->nomor_kotak}}</td>
-                        <td>Belum Ketauan Kode Apa</td>
+                        <td>{{$record->box->unit->first()->kode_unit}}</td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            {{$record->classification->uraian}}, {{$record->in_aktif}}
+                            {{$record->classification->uraian}}, {{$record->aktif}}, {{$record->in_aktif}}, {{$record->tindak_lanjut}}
                         </td>
                     </tr>
                 </tbody>

@@ -51,5 +51,6 @@ Route::group(['prefix' => 'rekap-arsip'], function(){
 });
 
 route::get('/label-arsip/show{record}','LabelController@singleRecord')->name('label-arsip.show');
+route::get('/daftar-arsip/show{record}','DaftararsipController@singleRecord')->name('daftar-arsip.show');
 
 Route::get('/home', 'HomeController@index')->name('home');
