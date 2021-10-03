@@ -17,7 +17,6 @@
                     <th>Kurun Waktu</th>
                     <th>Jumlah</th>
                     <th>Kode Klasifikasi</th>
-                    <th>Jadwal Refisi</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,7 +26,6 @@
                     <td>{{$record->durasi}}</td>
                     <td>{{$record->jumlah}}</td>
                     <td>{{$record->classification->kode}}</td>
-                    <td>-</td>
                 </tr>
             </tbody>
         </table>
@@ -40,16 +38,14 @@
                     <th>Uraian informasi Arsip</th>
                     <th>Tanggal</th>
                     <th>Jumlah</th>
-                    <th>Keterangan</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>{{$record->nomor_portagel}}</td>
                     <td>{{$record->classification->uraian}}</td>
-                    <td>{{$record->created_at}}</td>
-                    <td>-</td>
-                    <td>-</td>
+                    <td>{{$record->tgl_doc}}</td>
+                    <td>{{$record->jumlah_lembar}}</td>
                 </tr>
             </tbody>
         </table>
