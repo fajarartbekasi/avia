@@ -15,7 +15,7 @@
                                 <input type="text" name="kode" id="" class="form-control">
                             </div>
                             <div class="col-md-8">
-                                <label for="">Kode Klasifikasi</label>
+                                <label for="">Uraian Klasifikasi</label>
                                 <textarea name="uraian" id="" class="form-control" cols="30"></textarea>
                             </div>
                             <div class="col-md-4">

@@ -45,7 +45,7 @@
                     <tr>
                         <th>Dibuat Oleh</th>
                         <th>Diperiksa Oleh</th>
-                        <th>Tgl.Dioindahkan ke unit kearsipan</th>
+                        <th>Tgl.Dipindahkan ke unit kearsipan</th>
                         <th>Nomor berita acara pemindahan arsip interaktif</th>
                     </tr>
                 </thead>

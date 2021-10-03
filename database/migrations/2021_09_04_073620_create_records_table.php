@@ -28,6 +28,8 @@ class CreateRecordsTable extends Migration
             $table->string('tindak_lanjut');
             $table->string('media');
             $table->string('reg_ska');
+            $table->string('tgl_doc')->nullable();
+            $table->string('jumlah_lembar')->nullable();
             $table->timestamps();
         });
     }
