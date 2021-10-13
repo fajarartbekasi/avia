@@ -57,3 +57,11 @@ route::get('/label-arsip/show{record}','LabelController@singleRecord')->name('la
 route::get('/daftar-arsip/show{record}','DaftararsipController@singleRecord')->name('daftar-arsip.show');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'upload'], function(){
+    route::get('/', 'UploadController@index')->name('upload');
+    route::get('/form', 'UploadController@create')->name('upload.form');
+    route::post('/file', 'UploadController@store')->name('upload.file');
+    route::get('/show/{upload}', 'UploadController@show')->name('upload.show');
+    route::get('/download/{upload}', 'UploadController@download')->name('upload.download');
+});

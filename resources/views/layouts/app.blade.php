@@ -48,11 +48,13 @@
                             <li class="nav-item">
                                 <a class="nav-link item-center" href="{{ route('rekap-arsip') }}">{{ __('Formulir rekam arsip') }}</a>
                             </li>
-
+                            <li class="nav-item">
+                                <a class="nav-link item-center" href="{{ route('upload') }}">{{ __('Upload') }}</a>
+                            </li>
                         @endrole
                         @role('petugas')
                             <li class="nav-item">
-                                <a class="nav-link item-center" href="">{{ __('Data Upload') }}</a>
+                                <a class="nav-link item-center" href="{{ route('upload') }}">{{ __('Data Upload') }}</a>
                             </li>
                         @endrole
                     </ul>
