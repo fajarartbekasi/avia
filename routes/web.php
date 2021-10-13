@@ -11,14 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','WelcomeController@index');
 
 Auth::routes();
 
 Route::group(['prefix' => 'satuan-kerja'], function(){
     route::get('/', 'SatuankerjaController@index')->name('satuan-kerja');
+    route::get('/create', 'SatuankerjaController@create')->name('satuan-kerja.create');
     route::post('/store', 'SatuankerjaController@store')->name('satuan-kerja.store');
     route::get('/edit/{unit}', 'SatuankerjaController@edit')->name('satuan-kerja.edit');
     route::put('/update/{unit}', 'SatuankerjaController@update')->name('satuan-kerja.update');

@@ -17,7 +17,7 @@ class KotakarsipController extends Controller
     }
     public function index()
     {
-        $boxs = Box::with('unit')->get();
+        $boxs = Box::with('unit')->paginate(5);
        return view('kotakarsip.index', compact('boxs'));
     }
     public function edit($id)

@@ -17,7 +17,7 @@ class RekaparsipController extends Controller
 
     public function index()
     {
-        $records = Record::with('box','classification')->get();
+        $records = Record::with('box','classification')->paginate(5);
         return view('rekaparsip.index', compact('records'));
     }
     public function edit($id)

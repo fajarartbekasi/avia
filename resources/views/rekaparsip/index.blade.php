@@ -2,7 +2,13 @@
 
 @section('content')
 
-<div class="container">
+<div class="container pt-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb pt-3 mb-3">
+            <li class="breadcrumb-item"><a href="#">Rekap Arsip</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Index</li>
+        </ol>
+    </nav>
     <div class="row">
         <div class="col-md-12">
             <div class="card border-0">
@@ -41,6 +47,7 @@
                             @endforelse
                         </tbody>
                     </table>
+                    {{$records->links()}}
                 </div>
             </div>
         </div>

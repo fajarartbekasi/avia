@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container pt-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb pt-3 mb-3">
+            <li class="breadcrumb-item"><a href="#">Kotak Arsip</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tambah Kotak arsip</li>
+        </ol>
+    </nav>
     <div class="row">
         <div class="col-md-12 pb-5">
             <div class="card border-0">

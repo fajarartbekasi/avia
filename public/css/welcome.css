@@ -10944,14 +10944,20 @@ a.text-dark:focus {
   }
 }
 
-html,
 body {
-  overflow-x: hidden;
-  /* Prevent scroll on narrow devices */
+  background-image: url(/images/Organizing.png?1f191b1831114476fc436ef2b12202e2);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 3rem 0rem;
+  background-color: #464646;
 }
 
-body {
-  padding-top: 56px;
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url(/images/Organizing.png?1f191b1831114476fc436ef2b12202e2);
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -11013,5 +11019,13 @@ body {
 
 .bg-purple {
   background-color: #6f42c1;
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+.p-15 {
+  padding: 15rem;
 }
 

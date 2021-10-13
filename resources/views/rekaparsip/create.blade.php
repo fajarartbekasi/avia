@@ -2,10 +2,19 @@
 
 @section('content')
 
-<div class="container">
+<div class="container pt-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb pt-3 mb-3">
+            <li class="breadcrumb-item"><a href="#">Kotak Arsip</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tambah Rekam Arsip</li>
+        </ol>
+    </nav>
     <div class="row">
         <div class="col-md-12 pb-5">
             <div class="card border-0">
+                <div class="card-header bg-white border-bottom">
+                    <h4>Masukan data rekam arsip dengan benar</h4>
+                </div>
                 <div class="card-body">
                     <form action="{{route('rekap-arsip.store', $box->id)}}" method="post">
                         @csrf

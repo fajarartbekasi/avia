@@ -1,29 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
-
-<div class="container">
-    <div class="row">
+<div class="container pt-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb pt-3">
+            <li class="breadcrumb-item"><a href="#">Classification</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit classification</li>
+        </ol>
+    </nav>
+    <div class="row d-flex justify-content-center">
         <div class="col-md-12">
             <div class="card border-0">
+                <div class="card-header bg-white border-bottom">
+                    <h4>Masukan data klasifikasi dibawah ini dengan benar</h4>
+                </div>
                 <div class="card-body">
                     <form action="{{route('classification.update', $classification->id)}}" method="post">
                         @csrf
                         @method('PUT')
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label for="">Kode Klasifikasi</label>
-                                <input type="text" name="kode" id="" value="{{$classification->kode}}" class="form-control">
-                            </div>
-                            <div class="col-md-8">
-                                <label for="">Kode Klasifikasi</label>
-                                <textarea name="uraian" id="" class="form-control" cols="30">
-                                    {{$classification->uraian}}
-                                </textarea>
-                            </div>
-                            <div class="col-md-4">
-                                <button type="submit" class="btn btn-info">Simpan klasifikasi</button>
-                            </div>
+                        <div class="form-group">
+                            <label for="">Kode Klasifikasi</label>
+                            <input type="text" name="kode" id="" value="{{$classification->kode}}" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Kode Klasifikasi</label>
+                            <textarea name="uraian" id="" class="form-control" cols="30">
+                                {{$classification->uraian}}
+                            </textarea>
+                        </div>
+                        <div class="">
+                            <button type="submit" class="btn btn-info">Update klasifikasi</button>
                         </div>
                     </form>
                 </div>

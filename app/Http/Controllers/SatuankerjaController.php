@@ -17,6 +17,10 @@ class SatuankerjaController extends Controller
         $units = Unit::paginate(5);
         return view('satuankerja.index', compact('units'));
     }
+    public function create()
+    {
+        return view('satuankerja.create');
+    }
     public function store(Request $request)
     {
         $this->validate($request,[

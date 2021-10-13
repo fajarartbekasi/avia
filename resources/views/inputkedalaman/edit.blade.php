@@ -1,12 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container pt-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb pt-3 mb-3">
+            <li class="breadcrumb-item"><a href="#">Rekap Arsip</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Input Kedalaman</li>
+        </ol>
+    </nav>
     <div class="row">
         <div class="col-md-12">
             <div class="card border-0">
+                <div class="card-header bg-white border-bottom">
+                    <h4>Masukan Data dibawah ini dengan benar</h4>
+                </div>
                 <div class="card-body">
-                    <h4>Form input kedalaman</h4>
                     <form action="{{route('update.kedalaman', $box->id)}}" method="POST">
                         @csrf
                         @method('PUT')
