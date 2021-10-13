@@ -25,7 +25,11 @@
                             @forelse($records as $record)
                             <tr>
                                 <td>{{$record->box->nomor_kotak}}</td>
-                                <td>{{$record->nomor_portagel}}</td>
+                                <td>
+                                    <a href="{{route('form-input.kedalaman',$record->id)}}" class="btn btn-outline-info btn-sm">
+                                        {{$record->nomor_portagel}}
+                                    </a>
+                                </td>
                                 <td>
                                     <a href="{{route('rekap-arsip.show', $record->id)}}" class="btn btn-outline-info btn-sm">View Detail Rekap Arsip</a>
                                     <a href="{{route('label-arsip.show', $record->id)}}" class="btn btn-outline-info btn-sm">Cetak Label Arsip</a>

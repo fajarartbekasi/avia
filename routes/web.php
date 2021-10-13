@@ -50,6 +50,9 @@ Route::group(['prefix' => 'rekap-arsip'], function(){
     route::get('/show/{box}','RekaparsipController@show')->name('rekap-arsip.show');
 });
 
+route::get('/form-input/kedalaman/{box}','InputkedalamanController@edit')->name('form-input.kedalaman');
+route::put('/update/kedalaman/{record}','InputkedalamanController@update')->name('update.kedalaman');
+
 route::get('/label-arsip/show{record}','LabelController@singleRecord')->name('label-arsip.show');
 route::get('/daftar-arsip/show{record}','DaftararsipController@singleRecord')->name('daftar-arsip.show');
 
