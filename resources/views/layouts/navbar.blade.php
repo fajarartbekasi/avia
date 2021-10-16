@@ -44,6 +44,9 @@
     <nav class="nav nav-underline d-flex justify-content-center" aria-label="Secondary navigation">
         @role('admin')
             <li class="nav-item">
+                <a class="nav-link item-center" href="{{ route('invitations') }}">{{ __('Invitations') }}</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link item-center" href="{{ route('classification') }}">{{ __('classification') }}</a>
             </li>
             <li class="nav-item">

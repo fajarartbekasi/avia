@@ -64,3 +64,12 @@ Route::group(['prefix' => 'upload'], function(){
     route::get('/show/{upload}', 'UploadController@show')->name('upload.show');
     route::get('/download/{upload}', 'UploadController@download')->name('upload.download');
 });
+
+Route::group(['prefix' => 'invitations'], function(){
+    route::get('/', 'InvitationController@index')->name('invitations');
+    route::get('/create', 'InvitationController@create')->name('invitations.create');
+    route::post('/store', 'InvitationController@store')->name('invitations.store');
+    route::get('/edit/{user}', 'InvitationController@edit')->name('invitations.edit');
+    route::patch('/update/{user}', 'InvitationController@update')->name('invitations.update');
+    route::delete('/destroy/{user}', 'InvitationController@destroy')->name('invitations.destroy');
+});
