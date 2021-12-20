@@ -10,11 +10,16 @@
         </ol>
     </nav>
     <div class="row">
-        <div class="col-md-12">
-            <div class="card border-0">
+        <div class="col-md-12 mb-3">
+            <div class="card border-0 shadow-sm">
                 <div class="card-body">
+                    @if(session('status'))
+                        <div class="alert alert-success">
+                            {{session('status')}}
+                        </div>
+                    @endif
                     <div class="pt-2">
-                        <a href="{{route('satuan-kerja.create')}}" class="btn btn-info">Tambah Satuan</a>
+                        <a href="{{route('satuan-kerja.create')}}" class="btn btn-info">Tambah Satuan Kerja</a>
                     </div>
                     <div class="pt-4">
                         <table class="table table-striped">
@@ -34,8 +39,8 @@
                                             <form action="{{route('satuan-kerja.delete', $unit->id)}}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <a href="{{route('satuan-kerja.edit', $unit->id)}}" class="btn btn-outline-info btn-sm">Edit Satuan</a>
-                                                <button type="submit" class="btn btn-outline-danger btn-sm">Hapus Satuan</button>
+                                                <a href="{{route('satuan-kerja.edit', $unit->id)}}" class="btn btn-outline-info btn-sm">Edit Satuan Kerja</a>
+                                                <button type="submit" class="btn btn-outline-danger btn-sm">Hapus Satuan Kerja</button>
                                             </form>
                                         </td>
                                     </tr>

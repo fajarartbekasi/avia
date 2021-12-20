@@ -73,3 +73,17 @@ Route::group(['prefix' => 'invitations'], function(){
     route::patch('/update/{user}', 'InvitationController@update')->name('invitations.update');
     route::delete('/destroy/{user}', 'InvitationController@destroy')->name('invitations.destroy');
 });
+
+Route::group(['prefix' => 'daftar-isi'], function(){
+    route::get('/','DaftarController@index')->name('daftar-isi');
+    route::get('create/{box}','DaftarController@create')->name('daftar-isi.create');
+    route::post('store','DaftarController@store')->name('daftar-isi.store');
+});
+
+Route::group(['prefix'=>'cetak-periode'], function(){
+    route::get('/rekap-arsip/','DaftarController@show')->name('cetak-periode.rekap-arsip');
+    route::get('/daftar-isi-berkas/','DaftararsipController@show')->name('cetak-periode.daftar-isi-berkas');
+});
+
+Route::get('search','SeacrhController@show')->name('search');
+Route::get('search/daftar-isi/','SeacrhController@index')->name('search.daftar-isi');

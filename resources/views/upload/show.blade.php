@@ -3,8 +3,8 @@
 @section('content')
     <div class="container d-flex justify-content-center pt-3">
         <div class="row ">
-            <div class="col-md-8">
-                <div class="card border-0" style="width: 18rem;">
+            <div class="col-md-8 mb-3">
+                <div class="card border-0 shadow-sm" style="width: 18rem;">
                     <div class="card-header border-bottom bg-white">
                         <h4>Detail Upload</h4>
                     </div>

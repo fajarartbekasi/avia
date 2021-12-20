@@ -11,33 +11,26 @@
     <title>{{ config('app.name', 'Bumida') }}</title>
 
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" /> -->
-     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"> -->
-    <!-- <style>
-        .d-flex {
-            display: flex !important;
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <style>
+
+        .table{
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+
         }
-        .mr-3{
-            margin-right: 10rem !important;
+        th{
+            font-size: 70%;
         }
-        .col-md-4 {
-            flex: 0 0 33.3333333333%;
-            max-width: 33.3333333333%;
+        td{
+            font-size: 70%;
         }
-        .col-md-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-        .mt-3{
-            margin-top: 3rem;
-        }
-        #td {
-            padding-top: 150px !important;
-        }
-    </style> -->
+    </style>
 </head>
 
-<body >
+<body class="bg-white">
     <div id="app">
         <div class="content bg-white">
             @yield('content')

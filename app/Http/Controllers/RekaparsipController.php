@@ -34,7 +34,7 @@ class RekaparsipController extends Controller
         $this->validate($request,[
            'box_id'             => 'required',
            'classification_id'  => 'required',
-           'nomor_portagel'     => 'required',
+           'nomor_portapel'     => 'required',
            'nomor_berkas'       => 'required',
            'info_berkas'        => 'required',
            'durasi'             => 'required',
@@ -44,13 +44,15 @@ class RekaparsipController extends Controller
            'in_aktif'           => 'required',
            'tindak_lanjut'      => 'required',
            'media'              => 'required',
+           'lokasi'             => 'required',
+           'jenis'              => 'required',
            'reg_ska'            => 'required',
         ]);
 
         $records =  Record::create([
            'box_id'             => $id,
            'classification_id'  => $request->input('classification_id'),
-           'nomor_portagel'     => $request->input('nomor_portagel'),
+           'nomor_portapel'     => $request->input('nomor_portapel'),
            'nomor_berkas'       => $request->input('nomor_berkas'),
            'info_berkas'        => $request->input('info_berkas'),
            'durasi'             => $request->input('durasi'),
@@ -60,11 +62,12 @@ class RekaparsipController extends Controller
            'in_aktif'           => $request->input('in_aktif'),
            'tindak_lanjut'      => $request->input('tindak_lanjut'),
            'media'              => $request->input('media'),
+           'lokasi'             => $request->input('lokasi'),
+           'jenis'              => $request->input('jenis'),
            'reg_ska'            => $request->input('reg_ska'),
         ]);
 
-        flash('kotak arsip berhasil dibuat terimakasih');
-        return redirect()->route('rekap-arsip');
+        return redirect()->route('rekap-arsip')->with('status','Terimakasih telah menambahkan rekam arsip');
     }
     public function show($id)
     {

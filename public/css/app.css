@@ -11015,3 +11015,23 @@ body {
   background-color: #6f42c1;
 }
 
+.table1 {
+  width: 180%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.table1 {
+  border-collapse: collapse;
+}
+
+.th1 .td {
+  vertical-align: bottom;
+  border-bottom: 2px solid grey;
+  padding: 0.7rem;
+  text-align: initial;
+  text-align: -webkit-match-parent;
+  display: table-cel;
+  font-weight: bold;
+}
+

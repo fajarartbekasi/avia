@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClassificationsTable extends Migration
+class CreateContentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateClassificationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('classifications', function (Blueprint $table) {
+        Schema::create('contents', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('kode_klasifikasi')->unique();
-            $table->string('uraian_klasifikasi');
-            $table->string('aktif');
-            $table->string('in_aktif');
-            $table->string('tindak_lanjut');
+            $table->unsignedInteger('record_id');
+            $table->string('nomor_item_arsip');
+            $table->string('uraian_informasi_arsip');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateClassificationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classifications');
+        Schema::dropIfExists('contents');
     }
 }

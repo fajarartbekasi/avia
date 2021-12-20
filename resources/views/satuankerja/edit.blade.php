@@ -10,8 +10,8 @@
         </ol>
     </nav>
     <div class="row">
-        <div class="col-md-12">
-            <div class="card border-0">
+        <div class="col-md-12 mb-3">
+            <div class="card border-0 shadow-sm">
                 <div class="card-header border-bottom bg-white">
                     <h4>Silahkan Edit data satuan dibawah ini dengan benar</h4>
                 </div>

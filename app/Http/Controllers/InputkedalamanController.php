@@ -21,7 +21,6 @@ class InputkedalamanController extends Controller
            'jumlah_lembar'  => $request->input('jumlah_lembar'),
        ]);
 
-       flash('Kedalaman berhasil di input terimakasih');
-        return redirect()->back();
+        return redirect()->route('rekap-arsip')->with('status', 'terimakasih telah mengisi data kedalaman');
     }
 }

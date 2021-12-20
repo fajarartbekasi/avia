@@ -9,9 +9,9 @@
             </ol>
         </nav>
         <div class="row">
-            <div class="col-md-12">
-                <div class="card border-0">
-                    <div class="card-header border-bottom">
+            <div class="col-md-12 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header border-bottom bg-white">
                         <h4>Masukan Data Satuan Dibawah Ini Dengan Benar</h4>
                     </div>
                     <div class="card-body">

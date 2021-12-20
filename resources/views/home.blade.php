@@ -16,66 +16,146 @@
         </ol>
     </nav>
     <div class="row">
-        <div class="col-md-3">
-            <div class="card border-0">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h6 class="text-secondary">Total</h6>
-                            <h5>Classification</h5>
-                        </div>
-                        <div>
-                            <h5 class="text-info">50</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border-0">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h6 class="text-secondary">Total</h6>
-                            <h5>Satuan Kerja</h5>
-                        </div>
-                        <div>
-                            <h5 class="text-info">50</h5>
+        @role('admin')
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h6 class="text-secondary">Total</h6>
+                                <h5>Classification</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-info">{{$classifications}}</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border-0">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h6 class="text-secondary">Total</h6>
-                            <h5>Kotak</h5>
-                        </div>
-                        <div>
-                            <h5 class="text-info">50</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border-0">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h6 class="text-secondary">Total</h6>
-                            <h5>Rekam Arsip</h5>
-                        </div>
-                        <div>
-                            <h5 class="text-info">50</h5>
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h6 class="text-secondary">Total</h6>
+                                <h5>Unit</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-info">{{$units}}</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h6 class="text-secondary">Total</h6>
+                                <h5>Kotak</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-info">{{$boxs}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h6 class="text-secondary">Total</h6>
+                                <h5>Rekam Arsip</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-info">{{$records}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h6 class="text-secondary">Total</h6>
+                                <h5>User</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-info">{{$users}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h6 class="text-secondary">Total</h6>
+                                <h5>Daftar isi berkas</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-info">{{$contents}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endrole
+
+        @role('petugas')
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h6 class="text-secondary">Total</h6>
+                                <h5>Rekam Arsip</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-info">{{$records}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h6 class="text-secondary">Total</h6>
+                                <h5>Daftar isi berkas</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-info">{{$contents}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h6 class="text-secondary">Total</h6>
+                                <h5>Upload</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-info">{{$uploads}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endrole
     </div>
 </div>
 

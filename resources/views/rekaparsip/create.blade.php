@@ -10,8 +10,13 @@
         </ol>
     </nav>
     <div class="row">
-        <div class="col-md-12 pb-5">
-            <div class="card border-0">
+        <div class="col-md-12 pb-5 mb-3">
+            <div class="card border-0 shadow-sm">
+                @if(session('status'))
+                    <div class="alert alert-success">
+                        {{session('status')}}
+                    </div>
+                @endif
                 <div class="card-header bg-white border-bottom">
                     <h4>Masukan data rekam arsip dengan benar</h4>
                 </div>
@@ -21,15 +26,15 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="">Nomor Kontak</label>
+                                    <label for="">Nomor Kotak</label>
                                     <input type="hidden" name="box_id" id="" value="{{$box->id}}" class="form-control">
                                     <input type="text" name="" id="" value="{{$box->nomor_kotak}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="">Nomor Portagel</label>
-                                    <input type="text" name="nomor_portagel" id="" class="form-control">
+                                    <label for="">Nomor Portapel</label>
+                                    <input type="text" name="nomor_portapel" id="" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -57,13 +62,13 @@
                                     <input type="text" name="jumlah" id="" class="form-control">
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="">Kode Klasifikasi</label>
                                     <select name="classification_id" id="kodeklas" class="form-control">
                                         <option value="">Silahkan Masukan Kode Klasifikasi</option>
                                         @foreach($class as $clas)
-                                            <option value="{{$clas->id}}">{{$clas->kode}}</option>
+                                            <option value="{{$clas->id}}" class="col-4">{{$clas->kode_klasifikasi}} - {{Illuminate\Support\Str::limit($clas->uraian_klasifikasi, 70)}} - {{$clas->aktif}} - {{$clas->in_aktif}} - {{$clas->tindak_lanjut}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -77,19 +82,19 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Aktif</label>
-                                    <input type="text" name="aktif" id="" class="form-control">
+                                    <input type="text" name="aktif" id="aktif" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">In Aktif</label>
-                                    <input type="text" name="in_aktif" id="" class="form-control">
+                                    <input type="text" name="in_aktif" id="in_aktif" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Tindak Lanjut akhir</label>
-                                    <input type="text" name="tindak_lanjut" id="" class="form-control">
+                                    <input type="text" name="tindak_lanjut" id="tindak_lanjut" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -116,13 +121,13 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Lokasi Penyimpanan</label>
                                     <input type="text" name="lokasi" id="" class="form-control">
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Nomor Register SKA</label>
                                     <input type="text" name="reg_ska" id="" class="form-control">

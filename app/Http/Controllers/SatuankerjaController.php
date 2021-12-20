@@ -39,9 +39,7 @@ class SatuankerjaController extends Controller
                 'unit_id'   => $unit->id,
             ]);
         }
-
-        flash('Satuan kotak arsip berhasil disimpan');
-        return redirect()->back();
+        return redirect()->route('satuan-kerja')->with('status', 'Terimakasih telah menambahkan data klasifikasi ');
     }
     public function edit($id)
     {
@@ -54,11 +52,11 @@ class SatuankerjaController extends Controller
 
         $unit->update($request->all());
 
-        return redirect()->back();
+        return redirect()->route('satuan-kerja')->with('status', 'Terimakasih telah melakukan update pada klassifikasi ');
     }
     public function destroy($id)
     {
          $unit = Unit::destroy($id);
-         return redirect()->back();
+         return redirect()->route('satuan-kerja')->with('status', 'Terimakasih anda telah menghapus data' );
     }
 }

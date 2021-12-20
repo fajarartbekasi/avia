@@ -24,16 +24,22 @@ class ClassficationController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'kode'         => 'required',
-            'uraian'       => 'required',
+            'kode_klasifikasi'      => 'required',
+            'uraian_klasifikasi'    => 'required',
+            'aktif'                 => 'required',
+            'in_aktif'              => 'required',
+            'tindak_lanjut'         => 'required',
         ]);
 
         $classification = Classification::create([
-            'kode'    => $request->input('kode'),
-            'uraian'  => $request->input('uraian'),
+            'kode_klasifikasi'      => $request->input('kode_klasifikasi'),
+            'uraian_klasifikasi'    => $request->input('uraian_klasifikasi'),
+            'aktif'                 => $request->input('aktif'),
+            'in_aktif'              => $request->input('in_aktif'),
+            'tindak_lanjut'         => $request->input('tindak_lanjut'),
         ]);
-        flash('Klasifikasi berhasil dibuat terimakasih');
-        return redirect()->back();
+
+        return redirect()->route('classification')->with('status','Terimakasih telah menambahkan Satuan kerja baru');
     }
     public function edit($id)
     {
@@ -47,7 +53,6 @@ class ClassficationController extends Controller
 
         $classification->update($request->all());
 
-        flash('Klasifikasi berhasil diperbarui terimakasih');
-        return redirect()->back();
+        return redirect()->route('classification')->with('status', 'Satuan kerja berhasil diperbarui terimakasih');
     }
 }

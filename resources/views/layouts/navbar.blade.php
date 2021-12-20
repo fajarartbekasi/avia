@@ -11,11 +11,6 @@
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
-                    @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                    @endif
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -42,12 +37,16 @@
 
 <div class="nav-scroller bg-white shadow-sm">
     <nav class="nav nav-underline d-flex justify-content-center" aria-label="Secondary navigation">
+
         @role('admin')
             <li class="nav-item">
-                <a class="nav-link item-center" href="{{ route('invitations') }}">{{ __('Invitations') }}</a>
+                <a class="nav-link item-center" href="{{ route('home') }}">{{ __('home') }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link item-center" href="{{ route('classification') }}">{{ __('classification') }}</a>
+                <a class="nav-link item-center" href="{{ route('invitations') }}">{{ __('Data Pengguna') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link item-center" href="{{ route('classification') }}">{{ __('Klasifikasi') }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link item-center" href="{{ route('satuan-kerja') }}">{{ __('Satuan Kerja') }}</a>
@@ -59,10 +58,23 @@
                 <a class="nav-link item-center" href="{{ route('rekap-arsip') }}">{{ __('Formulir rekam arsip') }}</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link item-center" href="{{ route('daftar-isi') }}">{{ __('Daftar Isi Berkas') }}</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link item-center" href="{{ route('upload') }}">{{ __('Upload') }}</a>
             </li>
+
         @endrole
         @role('petugas')
+            <li class="nav-item">
+                <a class="nav-link item-center" href="{{ route('home') }}">{{ __('home') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link item-center" href="{{ route('rekap-arsip') }}">{{ __('Formulir rekam arsip') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link item-center" href="{{ route('daftar-isi') }}">{{ __('Daftar Isi Berkas') }}</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link item-center" href="{{ route('upload') }}">{{ __('Data Upload') }}</a>
             </li>

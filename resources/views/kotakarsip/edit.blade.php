@@ -9,8 +9,8 @@
         </ol>
     </nav>
     <div class="row">
-        <div class="col-md-12 pb-5">
-            <div class="card border-0">
+        <div class="col-md-12 pb-5 nb-3">
+            <div class="card border-0 shadow-sm">
                 <div class="card-body">
                     <form action="{{route('kotak-arsip.update', $boxs->id)}}" method="post">
                         @csrf
@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="">Nomor Kontak</label>
+                                    <label for="">Nomor Kotak Arsip</label>
                                     <input type="text" name="nomor_kotak" id=""  class="form-control">
                                 </div>
                             </div>

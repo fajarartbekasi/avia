@@ -5,17 +5,17 @@
 <div class="container pt-3">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb pt-3">
-            <li class="breadcrumb-item"><a href="#">Invitations</a></li>
+            <li class="breadcrumb-item"><a href="#">Data Pengguna</a></li>
             <li class="breadcrumb-item active" aria-current="page">Index</li>
         </ol>
     </nav>
 
     <div class="row">
-        <div class="col-md-12">
-            <div class="card border-0">
+        <div class="col-md-12 mb-3">
+            <div class="card border-0 shadow-sm">
                 <div class="card-header bg-white border-bottom">
                     <div class="mt-3 mb-3">
-                        <a href="{{route('invitations.create')}}" class="btn btn-info">Tambah User Baru</a>
+                        <a href="{{route('invitations.create')}}" class="btn btn-info">Tambah Pengguna Baru</a>
                     </div>
                 </div>
                 <div class="card-body">

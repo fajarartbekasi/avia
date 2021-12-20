@@ -9,7 +9,7 @@ class Record extends Model
     protected $table = 'records';
     protected $fillable = [
            'box_id','classification_id',
-           'nomor_portagel',
+           'nomor_portapel',
            'nomor_berkas',
            'info_berkas',
            'durasi',
@@ -19,6 +19,8 @@ class Record extends Model
            'in_aktif',
            'tindak_lanjut',
            'media',
+           'jenis',
+           'lokasi',
            'reg_ska',
            'tgl_doc',
            'jumlah_lembar',
@@ -35,5 +37,9 @@ class Record extends Model
     public function uploads()
     {
         return $this->hasMany(Upload::class);
+    }
+    public function contents()
+    {
+        return $this->hasMany(Content::class);
     }
 }

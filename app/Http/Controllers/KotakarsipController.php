@@ -42,7 +42,7 @@ class KotakarsipController extends Controller
        $boxs->update($request->all());
 
        flash('Klasifikasi berhasil diperbarui terimakasih');
-        return redirect()->back();
+        return redirect()->route('rekap-arsip.edit',$boxs->id)->with('status', 'Silahkan input data rekam arsip');
     }
 
     public function autocomplete(Request $request)

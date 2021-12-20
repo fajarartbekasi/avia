@@ -40,7 +40,10 @@
                         data:{'id' : id},
                         dataType:'json',
                         success: function(data){
-                            $('#desc').show().val(data[0].uraian);
+                            $('#desc').show().val(data[0].uraian_klasifikasi);
+                            $('#aktif').show().val(data[0].aktif);
+                            $('#in_aktif').show().val(data[0].in_aktif);
+                            $('#tindak_lanjut').show().val(data[0].tindak_lanjut);
                         },
                         error: function(data){
                             alert('Error ');

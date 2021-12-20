@@ -17,7 +17,7 @@ class CreateRecordsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('box_id');
             $table->unsignedInteger('classification_id');
-            $table->string('nomor_portagel');
+            $table->string('nomor_portapel');
             $table->string('nomor_berkas');
             $table->string('info_berkas');
             $table->string('durasi');
@@ -28,6 +28,8 @@ class CreateRecordsTable extends Migration
             $table->string('tindak_lanjut');
             $table->string('media');
             $table->string('reg_ska');
+            $table->string('lokasi');
+            $table->string('jenis');
             $table->string('tgl_doc')->nullable();
             $table->string('jumlah_lembar')->nullable();
             $table->timestamps();

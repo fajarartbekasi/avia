@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="container">
+<div class="container pt-3">
     <div class="row">
-        <div class="col-md-12">
-            <div class="card border-0">
+        <div class="col-md-12 mb-3">
+            <div class="card border-0 shadow-sm">
                 <div class="card-body">
                     <h5 >Form upload scan</h5>
                     <form action="{{route('upload.file')}}" method="post" enctype="multipart/form-data">

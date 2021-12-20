@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Box;
+use App\Classification;
+use App\Content;
+use App\Record;
+use App\Unit;
+use App\Upload;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +30,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data = [
+            'classifications'   => Classification::count(),
+            'units'             => Unit::count(),
+            'boxs'              => Box::count(),
+            'records'           => Record::count(),
+            'users'             => User::count(),
+            'contents'          => Content::count(),
+            'uploads'           => Upload::count(),
+        ];
+        return view('home', $data);
     }
 }

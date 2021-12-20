@@ -3,7 +3,7 @@
 @section('content')
 <div class="container pt-5">
     <div class="row justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-5 mb-3">
             <div class="card border-0 shadow">
                 <div class="card-body">
                     <div class="d-flex justify-content-center mb-3">
@@ -46,12 +46,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
                             </div>
                         </div>
                     </form>
