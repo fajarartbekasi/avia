@@ -6,7 +6,7 @@
 <div class="container bg-white">
     <div class=" bg-white">
         <div class="mb-3 d-flex">
-            <img src="{{asset('img/OJK_Logo.png')}}" width="15%" alt="">
+            <h3>{{ config('app.name', 'Laravel') }}</h3>
             <div class="text-center">
                 <h3>Label Berkas</h3>
             </div>

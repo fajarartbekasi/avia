@@ -6,7 +6,7 @@
 <div class="">
     <div class="">
         <div class="mb-3">
-            <img src="{{asset('img/OJK_Logo.png')}}" width="30%" alt="">
+            <h3>{{ config('app.name', 'Laravel') }}</h3>
             <div>
                 <h3>{{$record->box->nomor_kotak}}</h3>
             </div>

@@ -4,6 +4,7 @@
 
 <div class="bg-white">
     <div class="mb-3">
+        <h3>{{ config('app.name', 'Laravel') }}</h3>
         <h3>Nomor Induk : {{$record->box->unit->first()->kode_unit}}</h3>
         <h3>Nama perusahaan : {{$record->box->unit->first()->unit_kerja}}</h3>
         <h3>Nama Kotak : {{$record->box->nomor_kotak}} </h3>
