@@ -52,7 +52,7 @@
                             </div>
                             <div class="col-md-6">
                                 <button type="submit" class="btn btn-info">
-                                    Add new members
+                                    Update User
                                 </button>
                                 <a href="{{route('invitations')}}" class="btn btn-secondary">Cancel</a>
                             </div>

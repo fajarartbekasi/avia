@@ -90,9 +90,8 @@ class InvitationController extends Controller
             $user->password = bcrypt($request->get('password'));
         }
 
-        $this->syncPermissions($request, $user);
-
-        $user->update($request->all());
+        $user->save();
+        $user->syncRoles($request->get('roles'));
 
         return redirect()->back()->with(['success' => 'terimakasih']);
     }

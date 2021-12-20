@@ -42,6 +42,7 @@
                                         <form action="{{route('invitations.destroy', $user->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
+                                            <a href="{{route('invitations.edit', $user->id)}}" class="btn btn-outline-info btn-sm">Edit</a>
                                             <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                                         </form>
                                     </td>
