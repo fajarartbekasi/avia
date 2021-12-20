@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
         // admin
         $ketua = factory(User::class)->create([
             'name'     => 'Admin',
-            'email'    => 'admin@ojk.com',
+            'email'    => 'admin@avia.com',
             'email_verified_at' => now(),
             'password' => bcrypt('laravel'),
         ]);
@@ -29,7 +29,7 @@ class UsersTableSeeder extends Seeder
         // petugas
         $petugas = factory(User::class)->create([
             'name'     => 'John Doe',
-            'email'    => 'johndoe@ojk.com',
+            'email'    => 'johndoe@avia.com',
             'email_verified_at' => now(),
             'password' => bcrypt('laravel'),
         ]);
