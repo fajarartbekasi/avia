@@ -16,7 +16,7 @@
                                 <select name="record_id" class="form-control" id="">
                                     <option value="">Pilih kode clasifikasi</option>
                                     @foreach($records as $record)
-                                        <option value="{{$record->id}}">{{$record->classification->kode}}</option>
+                                        <option value="{{$record->id}}">{{$record->classification->kode_klasifikasi}}</option>
                                     @endforeach
                                 </select>
                             </div>

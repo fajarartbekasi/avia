@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label for="">Uraian Kode Klasifikasi</label>
                             <textarea name="uraian_klasifikasi" id="" class="form-control" cols="30">
-                                {{$classification->uraian}}
+                                {{$classification->uraian_klasifikasi}}
                             </textarea>
                         </div>
                         <div class="form-group">

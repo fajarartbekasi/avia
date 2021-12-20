@@ -47,11 +47,11 @@ class UploadController extends Controller
         return tap(request()->validate([
             'record_id'   => 'required',
             'judul'       => 'required',
-            'image'       => 'required|image|max:5000',
+            'image'       => 'required|mimes:jpeg,jpg,png|max:5000',
         ]), function(){
             if(request()->hasFile('image')){
                 request()->validate([
-                    'image'    => 'required|image|max:5000',
+                    'image'    => 'required|mimes:jpeg,jpg,png|max:5000',
                 ]);
             }
         });

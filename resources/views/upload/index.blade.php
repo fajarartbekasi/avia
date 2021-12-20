@@ -30,7 +30,7 @@
                             <tbody>
                                 @foreach($uploads as $upload)
                                     <tr>
-                                        <td>{{$upload->record->classification->kode}}</td>
+                                        <td>{{$upload->record->classification->kode_klasifikasi}}</td>
                                         <td>{{$upload->judul}}</td>
                                         <td>
                                             <a href="{{route('upload.show', $upload->id)}}" class="btn btn-info btn-sm">Show File</a>

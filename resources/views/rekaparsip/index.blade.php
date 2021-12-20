@@ -13,10 +13,9 @@
     <div class="alert alert-danger">
         <h6>Perhatian</h6>
         <ul>
-            <li>Untuk mengisi input kedalaman silahkan klik button pada kolom nomor portapel</li>
-            <li>Untuk Melihat Detail Rekap Arsip silahkan klik Uraian klasifikasi</li>
-            <li>Untuk mengisi daftar isi berkas silahkan klik nomor berkas</li>
             <li>Untuk mengisi Daftar isi berkas silahkan isi kedalam terlebih dahulu</li>
+            <li>Untuk mengisi input kedalaman silahkan klik button pada kolom nomor portapel</li>
+            <li>Untuk mengisi daftar isi berkas silahkan klik nomor berkas</li>
             <li>Untuk cek detail arsip klik kode klasifikasi</li>
             <li>Untuk cetak label silahkan klik nomor kotak</li>
         </ul>
@@ -138,7 +137,7 @@
                                     <td>{{$record->jumlah}}</td>
                                     <td>{{$record->jenis}}</td>
                                     <td>{{$record->media}}</td>
-                                    <td>{{$record->contents->first()->created_at->format('Y-m-d') ?? '-'}}</td>
+                                    <td>{{$record->created_at->format('Y-m-d') ?? ' - '}}</td>
                                     @role('admin')
                                         <td>
                                             <a href="{{route('rekap-arsip.show', $record->id)}}" class="btn btn-outline-info btn-sm">
