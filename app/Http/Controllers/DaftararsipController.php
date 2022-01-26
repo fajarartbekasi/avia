@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Classification;
 use App\Content;
 use PDF;
 use App\Record;
@@ -9,6 +10,20 @@ use Illuminate\Http\Request;
 
 class DaftararsipController extends Controller
 {
+    public function edit($id)
+    {
+        $record = Record::findOrFail($id);
+        $class  = Classification::all();
+        return view('rekaparsip.edit', compact('record', 'class'));
+    }
+    public function update(Request $request, $id)
+    {
+       $record = Record::findOrFail($id);
+
+       $record->update($request->all());
+
+       return redirect()->back()->with('status','Terimakasih data berhasil diubah');
+    }
     public function singleRecord($id)
     {
         $record = Record::findOrFail($id);

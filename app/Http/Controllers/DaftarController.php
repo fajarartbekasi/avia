@@ -37,6 +37,27 @@ class DaftarController extends Controller
 
         return redirect()->route('daftar-isi')->with('status', 'terimakasih telah mengisi Daftar isi berkas berkas');
     }
+    public function edit($id)
+    {
+        $content = Content::findOrFail($id);
+        return view('daftarIsi.edit', compact('content'));
+    }
+    public function update(Request $request, $id)
+    {
+        $content = Content::findOrFail($id);
+
+        $content->update($request->all());
+
+        return redirect()->back()->with('status', 'Terimakasih data berhasil di ubah');
+    }
+    public function destroy(Request $request, $id)
+    {
+        $content = Content::findOrFail($id);
+
+        $content->delete($request->all());
+
+        return redirect()->back()->with('status', 'Terimakasih data berhasil di hapus');
+    }
     public function show(Request $request)
     {
         if ($request->has('tgl_awal')) {

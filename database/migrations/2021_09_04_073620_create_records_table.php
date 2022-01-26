@@ -15,21 +15,21 @@ class CreateRecordsTable extends Migration
     {
         Schema::create('records', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('box_id');
-            $table->unsignedInteger('classification_id');
-            $table->string('nomor_portapel');
-            $table->string('nomor_berkas');
-            $table->string('info_berkas');
-            $table->string('durasi');
-            $table->string('jumlah');
-            $table->string('uraian');
-            $table->string('aktif');
-            $table->string('in_aktif');
-            $table->string('tindak_lanjut');
-            $table->string('media');
-            $table->string('reg_ska');
-            $table->string('lokasi');
-            $table->string('jenis');
+            $table->unsignedInteger('box_id')->nullable();
+            $table->unsignedInteger('classification_id')->nullable();
+            $table->string('nomor_portapel')->nullable();
+            $table->string('nomor_berkas')->nullable();
+            $table->string('info_berkas')->nullable();
+            $table->string('durasi')->nullable();
+            $table->string('jumlah')->nullable();
+            $table->longText('uraian')->nullable();
+            $table->string('aktif')->nullable();
+            $table->string('in_aktif')->nullable();
+            $table->string('tindak_lanjut')->nullable();
+            $table->string('media')->nullable();
+            $table->string('reg_ska')->nullable();
+            $table->string('lokasi')->nullable();
+            $table->string('jenis')->nullable();
             $table->string('tgl_doc')->nullable();
             $table->string('jumlah_lembar')->nullable();
             $table->timestamps();

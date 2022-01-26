@@ -1,0 +1,43 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container pt-3">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h5>Form upload scan</h5>
+                    <form action="{{route('upload.update', $upload->id)}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        @method('PATCH')
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Kode clasifikasi</label>
+                                <select name="record_id" class="form-control" id="">
+                                    <option value="">Pilih kode clasifikasi</option>
+                                    @foreach($records as $record)
+                                    <option value="{{$record->id}}">{{$record->classification->kode_klasifikasi}}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Nama Berkas</label>
+                                <input type="text" name="judul"  value="{{$upload->judul}}" id="" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">File</label>
+                                <input type="file" name="image" id="" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-info mt-3">Simpan file</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

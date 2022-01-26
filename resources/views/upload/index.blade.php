@@ -33,7 +33,13 @@
                                         <td>{{$upload->record->classification->kode_klasifikasi}}</td>
                                         <td>{{$upload->judul}}</td>
                                         <td>
-                                            <a href="{{route('upload.show', $upload->id)}}" class="btn btn-info btn-sm">Show File</a>
+                                            <form action="{{route('upload.destroy', $upload->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <a href="{{route('upload.show', $upload->id)}}" class="btn btn-info btn-sm">Show File</a>
+                                                <a href="{{route('upload.edit', $upload->id)}}" class="btn btn-info btn-sm">Edit</a>
+                                                <button type="submit" class="btn btn-outline-danger btn-sm">Hapus</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

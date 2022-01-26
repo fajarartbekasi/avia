@@ -16,7 +16,7 @@ class CreateClassificationsTable extends Migration
         Schema::create('classifications', function (Blueprint $table) {
             $table->increments('id');
             $table->string('kode_klasifikasi')->unique();
-            $table->string('uraian_klasifikasi');
+            $table->longText('uraian_klasifikasi');
             $table->string('aktif');
             $table->string('in_aktif');
             $table->string('tindak_lanjut');

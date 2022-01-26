@@ -27,7 +27,9 @@ Route::group(['prefix' => 'satuan-kerja'], function(){
 Route::group(['prefix' => 'kotak-arsip'], function(){
     route::get('/','KotakarsipController@index')->name('kotak-arsip');
     route::get('/edit/{box}','KotakarsipController@edit')->name('kotak-arsip.edit');
+    route::get('/ubah/{box}','KotakarsipController@ubah')->name('kotak-arsip.ubah');
     route::put('/update/{box}','KotakarsipController@update')->name('kotak-arsip.update');
+    route::put('/perbarui/{box}','KotakarsipController@perbarui')->name('kotak-arsip.perbarui');
     route::post('/store/{box}','KotakarsipController@store')->name('kotak-arsip.store');
     route::get('/show/{box}','KotakarsipController@show')->name('kotak-arsip.show');
 });
@@ -52,8 +54,10 @@ Route::group(['prefix' => 'rekap-arsip'], function(){
 route::get('/form-input/kedalaman/{box}','InputkedalamanController@edit')->name('form-input.kedalaman');
 route::put('/update/kedalaman/{record}','InputkedalamanController@update')->name('update.kedalaman');
 
-route::get('/label-arsip/show{record}','LabelController@singleRecord')->name('label-arsip.show');
-route::get('/daftar-arsip/show{record}','DaftararsipController@singleRecord')->name('daftar-arsip.show');
+route::get('/label-arsip/show/{record}','LabelController@singleRecord')->name('label-arsip.show');
+route::get('/daftar-arsip/show/{record}','DaftararsipController@singleRecord')->name('daftar-arsip.show');
+route::get('/daftar-arsip/edit/{record}','DaftararsipController@edit')->name('daftar-arsip.edit');
+route::patch('/daftar-arsip/update/{record}', 'DaftararsipController@update')->name('daftar-arsip.update');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -62,6 +66,9 @@ Route::group(['prefix' => 'upload'], function(){
     route::get('/form', 'UploadController@create')->name('upload.form');
     route::post('/file', 'UploadController@store')->name('upload.file');
     route::get('/show/{upload}', 'UploadController@show')->name('upload.show');
+    route::get('/edit/{upload}', 'UploadController@edit')->name('upload.edit');
+    route::patch('/update/{upload}', 'UploadController@update')->name('upload.update');
+    route::delete('/destroy/{upload}', 'UploadController@destroy')->name('upload.destroy');
     route::get('/download/{upload}', 'UploadController@download')->name('upload.download');
 });
 
@@ -77,6 +84,9 @@ Route::group(['prefix' => 'invitations'], function(){
 Route::group(['prefix' => 'daftar-isi'], function(){
     route::get('/','DaftarController@index')->name('daftar-isi');
     route::get('create/{box}','DaftarController@create')->name('daftar-isi.create');
+    route::get('edit/{box}','DaftarController@edit')->name('daftar-isi.edit');
+    route::patch('update/{content}','DaftarController@update')->name('daftar-isi.update');
+    route::delete('destroy/{content}','DaftarController@destroy')->name('daftar-isi.destroy');
     route::post('store','DaftarController@store')->name('daftar-isi.store');
 });
 

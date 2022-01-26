@@ -37,7 +37,7 @@
                                 @forelse($classifications as $classification)
                                 <tr>
                                     <td>{{$classification->kode_klasifikasi}}</td>
-                                    <td>{{$classification->uraian}}</td>
+                                    <td>{{$classification->uraian_klasifikasi}}</td>
                                     <td>{{$classification->aktif}}</td>
                                     <td>{{$classification->in_aktif}}</td>
                                     <td>{{$classification->tindak_lanjut}}</td>

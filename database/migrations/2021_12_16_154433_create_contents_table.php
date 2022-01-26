@@ -17,7 +17,7 @@ class CreateContentsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('record_id');
             $table->string('nomor_item_arsip');
-            $table->string('uraian_informasi_arsip');
+            $table->longText('uraian_informasi_arsip');
             $table->timestamps();
         });
     }

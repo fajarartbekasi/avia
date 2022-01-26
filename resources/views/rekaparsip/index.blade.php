@@ -167,6 +167,9 @@
                                     </td>
                                     @role('admin')
                                     <td >
+                                        <a href="{{route('daftar-arsip.edit', $record->id)}}" class="btn btn-outline-info btn-sm">Daftar
+                                            Edit
+                                        </a>
                                         <a href="{{route('daftar-arsip.show', $record->id)}}" class="btn btn-outline-info btn-sm">Daftar
                                             Arsip
                                         </a>

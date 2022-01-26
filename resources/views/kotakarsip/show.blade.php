@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="mt-3">
-            <h4>Unit Pengelola : {{$box->unit->unit_kerja}}</h4>
+            <h4>Unit Pengelola : {{$box->box->unit->unit_kerja}}</h4>
             <h4>Nomor Kotak : {{$box->nomor_kotak}}</h4>
         </div>
         <div class="mt-3">
@@ -29,12 +29,12 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{$box->records->first()->nomor_berkas}}</td>
-                        <td>{{$box->records->first()->uraian}}</td>
-                        <td>{{$box->records->first()->durasi}}</td>
-                        <td>{{$box->records->first()->jumlah}}</td>
-                        <td>{{$box->records->first()->nomor_berkas}}</td>
-                        <td>{{$box->records->first()->classification->kode}}</td>
+                        <td>{{$box->nomor_berkas}}</td>
+                        <td>{{$box->uraian}}</td>
+                        <td>{{$box->durasi}}</td>
+                        <td>{{$box->jumlah}}</td>
+                        <td>{{$box->nomor_berkas}}</td>
+                        <td>{{$box->classification->kode_klasifikasi}}</td>
                     </tr>
                 </tbody>
             </table>

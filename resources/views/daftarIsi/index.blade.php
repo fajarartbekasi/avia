@@ -80,8 +80,20 @@
                                 <tbody>
                                     @forelse ($contents as $content)
                                     <tr>
-                                        <td>{{$content->nomor_item_arsip}}</td>
-                                        <td>{{$content->record->nomor_berkas}}</td>
+                                        <td>
+                                            <form action="{{route('daftar-isi.destroy', $content->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                    {{$content->nomor_item_arsip}}
+                                                </button>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <a href="{{route('daftar-isi.edit', $content->id)}}" class="btn btn-outline-info btn-sm">
+                                                {{$content->record->nomor_berkas}}
+                                            </a>
+                                        </td>
                                         <td>{{$content->record->classification->kode_klasifikasi}}</td>
                                         <td>{{$content->record->classification->uraian_klasifikasi}}</td>
                                         <td>{{$content->record->tgl_doc}}</td>
